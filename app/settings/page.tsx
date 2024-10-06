@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Settings, Bell, Moon, Sun, User, Lock, HelpCircle, LogOut } from "lucide-react";
+import { Settings, Bell, Moon, User, Lock, HelpCircle, LogOut } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { useTheme } from "next-themes";
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -16,16 +17,27 @@ const itemVariants = {
   animate: { opacity: 1, x: 0 },
 };
 
-const settingsItems = [
-  { icon: Bell, title: "Notifications", component: Switch },
-  { icon: Moon, title: "Dark Mode", component: Switch },
-  { icon: User, title: "Account", href: "/settings/account" },
-  { icon: Lock, title: "Privacy", href: "/settings/privacy" },
-  { icon: HelpCircle, title: "Help & Support", href: "/settings/help" },
-  { icon: LogOut, title: "Log Out", onClick: () => console.log("Logging out...") },
-];
-
 export default function SettingsPage() {
+  const { theme, setTheme } = useTheme();
+
+  const settingsItems = [
+    { icon: Bell, title: "Notifications", component: Switch },
+    { 
+      icon: Moon, 
+      title: "Dark Mode", 
+      component: () => (
+        <Switch
+          checked={theme === "dark"}
+          onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
+        />
+      )
+    },
+    { icon: User, title: "Account", href: "/settings/account" },
+    { icon: Lock, title: "Privacy", href: "/settings/privacy" },
+    { icon: HelpCircle, title: "Help & Support", href: "/settings/help" },
+    { icon: LogOut, title: "Log Out", onClick: () => console.log("Logging out...") },
+  ];
+
   return (
     <ScrollArea className="h-screen">
       <motion.div

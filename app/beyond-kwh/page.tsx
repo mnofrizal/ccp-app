@@ -41,18 +41,25 @@ const mapCardVariants = {
 export default function BeyondKwhPage() {
   return (
     <motion.div
-      className="container mx-auto px-4 py-8 mb-20"
+      className="min-h-screen bg-background"
       initial="initial"
       animate="animate"
       variants={pageVariants}
     >
-      <h1 className="text-3xl font-bold text-custom-blue mb-6">Beyond kWh Revenue</h1>
-      
-      <Tabs defaultValue="statistik" className="w-full">
-        <TabsList className="grid w-full grid-cols-2 mb-6">
-          <TabsTrigger value="statistik">Statistik</TabsTrigger>
-          <TabsTrigger value="peta">Peta</TabsTrigger>
-        </TabsList>
+      <div className="bg-custom-blue text-white pb-6 pt-8 px-4 rounded-b-[2rem]">
+        <div className="container mx-auto">
+          <h1 className="text-3xl font-bold mb-6">Beyond kWh Revenue</h1>
+          
+          <Tabs defaultValue="statistik" className="w-full">
+            <TabsList className="grid w-full grid-cols-2 mb-6 bg-blue-600 rounded-full p-1">
+              <TabsTrigger value="statistik" className="rounded-full text-sm">Statistik</TabsTrigger>
+              <TabsTrigger value="peta" className="rounded-full text-sm">Peta</TabsTrigger>
+            </TabsList>
+          </Tabs>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 py-6">
         <TabsContent value="statistik">
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 gap-6"
@@ -145,7 +152,7 @@ export default function BeyondKwhPage() {
             </Card>
           </motion.div>
         </TabsContent>
-      </Tabs>
+      </div>
     </motion.div>
   );
 }
