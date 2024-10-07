@@ -1,12 +1,18 @@
 {
-  "name": "Hai Aya",
-  "short_name": "HaiAya",
-  "description": "Hai Aya CCP App",
+  "name": "Beyond kWh Revenue",
+  "short_name": "BeyondkWh",
+  "description": "Beyond kWh Revenue Application",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "background_color": "#4a90e2",
+  "theme_color": "#4a90e2",
   "icons": [
+    {
+      "src": "/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
     {
       "src": "/icon-192x192.png",
       "sizes": "192x192",
@@ -18,6 +24,19 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-wide.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "1080x1920",
+      "type": "image/png"
     }
   ],
   "prefer_related_applications": false

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <rect width="1920" height="1080" fill="#f0f0f0"/>
+  <rect x="0" y="0" width="1920" height="80" fill="#4a90e2"/>
+  <text x="20" y="50" font-family="Arial, sans-serif" font-size="24" fill="white">Beyond kWh Revenue</text>
+  <rect x="40" y="120" width="600" height="400" fill="white" stroke="#ddd"/>
+  <rect x="680" y="120" width="600" height="400" fill="white" stroke="#ddd"/>
+  <rect x="1320" y="120" width="560" height="880" fill="white" stroke="#ddd"/>
+  <text x="60" y="160" font-family="Arial, sans-serif" font-size="20" fill="#333">Total Revenue</text>
+  <text x="60" y="200" font-family="Arial, sans-serif" font-size="36" fill="#4a90e2">$45,231.89</text>
+  <rect x="60" y="220" width="560" height="20" fill="#e0e0e0" rx="10" ry="10"/>
+  <rect x="60" y="220" width="420" height="20" fill="#4a90e2" rx="10" ry="10"/>
+</svg>
