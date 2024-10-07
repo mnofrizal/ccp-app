@@ -1,11 +1,11 @@
 {
-  "name": "Hai Aya CCP App",
-  "short_name": "HaiAya",
-  "description": "Hai aya dalam membantu pencapaian CCP",
+  "name": "Beyond kWh Revenue",
+  "short_name": "BeyondkWh",
+  "description": "Beyond kWh Revenue Application",
   "start_url": "/",
-  "display": "fullscreen",
-  "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "display": "standalone",
+  "background_color": "#4a90e2",
+  "theme_color": "#4a90e2",
   "icons": [
     {
       "src": "/icon-144x144.png",

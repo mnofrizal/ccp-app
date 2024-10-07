@@ -16,10 +16,10 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
   themeColor: "#000000",
   viewport:
-    "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover",
+    "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
   appleWebApp: {
     capable: true,
-    statusBarStyle: "black-translucent",
+    statusBarStyle: "default",
     title: "Beyond kWh",
   },
   formatDetection: {
@@ -36,10 +36,6 @@ export const metadata: Metadata = {
     title: "Beyond kWh Revenue",
     description: "Beyond kWh Revenue Application",
   },
-  other: {
-    "apple-mobile-web-app-capable": "yes",
-    "mobile-web-app-capable": "yes",
-  },
 };
 
 export default function RootLayout({
@@ -50,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${poppins.className} flex flex-col min-h-screen bg-background text-foreground safe-area-padding`}
+        className={`${poppins.className} flex flex-col min-h-screen bg-background text-foreground`}
       >
         <ThemeProvider
           attribute="class"
@@ -58,8 +54,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="main-content flex-grow">{children}</main>
-          <BottomNavbar className="safe-area-bottom" />
+          <main className="flex-grow">{children}</main>
+          <BottomNavbar />
         </ThemeProvider>
       </body>
     </html>
