@@ -15,11 +15,27 @@ export const metadata: Metadata = {
   description: "Hai aya dalam membantu pencapaian CCP",
   manifest: "/manifest.json",
   themeColor: "#000000",
-  viewport: "width=device-width, initial-scale=1",
-  icons: [
-    { rel: "apple-touch-icon", url: "/icon-192x192.png" },
-    { rel: "icon", url: "/icon-192x192.png" },
-  ],
+  viewport:
+    "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Beyond kWh",
+  },
+  formatDetection: {
+    telephone: false,
+  },
+  openGraph: {
+    type: "website",
+    siteName: "Beyond kWh Revenue",
+    title: "Beyond kWh Revenue",
+    description: "Beyond kWh Revenue Application",
+  },
+  twitter: {
+    card: "summary",
+    title: "Beyond kWh Revenue",
+    description: "Beyond kWh Revenue Application",
+  },
 };
 
 export default function RootLayout({
