@@ -3,8 +3,17 @@
 import { motion } from "framer-motion";
 import { DollarSign, TrendingUp, Zap, BarChart, Map } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+// Komponen Progress sederhana
+const SimpleProgress = ({ value }: { value: number }) => (
+  <div className="h-2 w-full overflow-hidden rounded-full bg-gray-200">
+    <div
+      className="h-full bg-custom-blue"
+      style={{ width: `${Math.min(Math.max(value, 0), 100)}%` }}
+    />
+  </div>
+);
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -80,7 +89,7 @@ export default function BeyondKwhPage() {
                       <p className="text-xs text-muted-foreground">
                         +20.1% from last month
                       </p>
-                      <Progress value={75} className="mt-2" />
+                      <SimpleProgress value={75} />
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -97,7 +106,7 @@ export default function BeyondKwhPage() {
                       <p className="text-xs text-muted-foreground">
                         -5% from last week
                       </p>
-                      <Progress value={65} className="mt-2" />
+                      <SimpleProgress value={65} />
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -114,7 +123,7 @@ export default function BeyondKwhPage() {
                       <p className="text-xs text-muted-foreground">
                         Increased by 2.3% this quarter
                       </p>
-                      <Progress value={85} className="mt-2" />
+                      <SimpleProgress value={85} />
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -131,7 +140,7 @@ export default function BeyondKwhPage() {
                       <p className="text-xs text-muted-foreground">
                         Based on recent surveys
                       </p>
-                      <Progress value={92} className="mt-2" />
+                      <SimpleProgress value={92} />
                     </CardContent>
                   </Card>
                 </motion.div>

@@ -13,9 +13,19 @@ import {
   Search,
   ChevronRight,
 } from "lucide-react";
-import { Progress } from "@/components/ui/progress";
+
 import { useState } from "react";
 import Link from "next/link";
+
+// Komponen Progress sederhana
+const SimpleProgress = ({ value }: { value: number }) => (
+  <div className="h-2 w-full overflow-hidden rounded-full bg-gray-200">
+    <div
+      className="h-full bg-custom-blue"
+      style={{ width: `${Math.min(Math.max(value, 0), 100)}%` }}
+    />
+  </div>
+);
 
 const categories = [
   {
@@ -227,10 +237,7 @@ export default function EnergySummaryPage() {
                           {target.title}
                         </h3>
                         <div className="flex items-center justify-between">
-                          <Progress
-                            value={target.progress}
-                            className={`h-2 ${target.color} mt-1 flex-grow mr-2`}
-                          />
+                          <SimpleProgress value={target.progress} />
                           <span className="text-sm font-medium">
                             {target.progress}%
                           </span>
