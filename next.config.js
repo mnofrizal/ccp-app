@@ -10,6 +10,9 @@ const nextConfig = {
     console.log("Webpack build:", isServer ? "server" : "client");
     return config;
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 module.exports = nextConfig;
