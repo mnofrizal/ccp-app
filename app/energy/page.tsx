@@ -142,11 +142,11 @@ export default function EnergySummaryPage() {
             transition={{ delay: 0.4 }}
             className="relative mb-4 flex items-center"
           >
-            <Search className="absolute left-4 top-1/2 h-6 w-6 -translate-y-1/2 transform text-gray-400" />
+            <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 transform text-gray-400" />
             <Input
               type="text"
               placeholder="Cari target..."
-              className="w-full rounded-full bg-white py-7 pl-12 pr-4 text-xl text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-300"
+              className="w-full rounded-full bg-white py-6 pl-12 pr-4 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-300"
             />
           </motion.div>
         </div>
@@ -160,7 +160,7 @@ export default function EnergySummaryPage() {
           className="mb-6"
         >
           <div className="mb-4 flex items-center justify-between">
-            <h2 className="text-lg font-semibold">Categories</h2>
+            <h2 className="text-lg font-semibold">Kategori</h2>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
